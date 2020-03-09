@@ -1,7 +1,7 @@
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
-
+Example content 1
 ## Getting started
 
 * The application is implemented in Java.
@@ -21,7 +21,7 @@ To compile and run tests also execute:
 ```
 
 ## Overview
-
+Example content 2
 ### Structure
 
 The application represents a simple train controller system with the following three components.
@@ -31,7 +31,7 @@ The application represents a simple train controller system with the following t
 * User: The user can manipulate the reference speed of the train using a joystick.
 
 ### Behavior
-
+Example content 3
 Setting the reference speed of the train works in the following way.
 * The user can set the position of a joystick, which can be zero or a positive/negative number.
 * In each time unit, the controller adds the position of the joystick to the current reference speed. Therefore the reference speed does not change if the position is zero, it is incremented if the position is positive and it is decremented if the position is negative.
