@@ -1,6 +1,6 @@
 package hu.bme.mit.train.controller;
 
-//import hu.bme.mit.train.interfaces.TrainController;
+import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerImpl implements TrainController {
 

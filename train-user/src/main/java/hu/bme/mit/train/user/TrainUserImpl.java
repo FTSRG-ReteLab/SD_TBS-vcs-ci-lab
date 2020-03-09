@@ -10,6 +10,8 @@ public class TrainUserImpl implements TrainUser {
 	private int joystickPosition;
 	private String userName;
 
+	public TrainUserImpl(){};	
+
 	public TrainUserImpl(TrainController controller, String userName) {
 		this.controller = controller;
 		this.userName = userName;
@@ -31,4 +33,8 @@ public class TrainUserImpl implements TrainUser {
 		controller.setJoystickPosition(joystickPosition);
 	}
 
+	public String getName()
+{
+return userName;
+}
 }
