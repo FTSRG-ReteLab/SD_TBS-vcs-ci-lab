@@ -2,14 +2,17 @@ package hu.bme.mit.train.user;
 
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
+import java.lang.*;
 
 public class TrainUserImpl implements TrainUser {
 
 	private TrainController controller;
 	private int joystickPosition;
+	private String userName;
 
-	public TrainUserImpl(TrainController controller) {
+	public TrainUserImpl(TrainController controller, String userName) {
 		this.controller = controller;
+		this.userName = userName;
 	}
 
 	@Override
