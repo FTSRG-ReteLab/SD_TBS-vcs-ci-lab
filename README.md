@@ -1,7 +1,7 @@
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
-Example content 1
+Example content 1 Branch-A
 ## Getting started
 
 * The application is implemented in Java.
