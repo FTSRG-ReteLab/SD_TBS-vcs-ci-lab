@@ -8,6 +8,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
+import com.google.common.collect.*;
 
 public class TrainSystemTest {
 
@@ -49,6 +50,10 @@ public class TrainSystemTest {
 		controller.followSpeed();
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
-
+	
+	@Test
+	public void GuavaTest(){
+		Assert.assertNotEquals(0,controller.getTachometer().size());
+	}
 	
 }

@@ -46,5 +46,6 @@ public class TrainControllerImpl implements TrainController {
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
 	}
-
+	
+	public Table<Long,Integer,Integer> getTachometer(){return table;}
 }
