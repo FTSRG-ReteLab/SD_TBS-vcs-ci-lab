@@ -4,6 +4,8 @@ import hu.bme.mit.train.interfaces.TrainController;
 import com.google.common.collect.*;
 
 import java.lang.*;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 public class TrainControllerImpl extends Thread implements TrainController {
 
@@ -11,6 +13,7 @@ public class TrainControllerImpl extends Thread implements TrainController {
     private int referenceSpeed = 0;
     private int speedLimit = 0;
     private Table<Long, Integer, Integer> table = new ImmutableTable.Builder<Long, Integer, Integer>().put(System.currentTimeMillis(), step, referenceSpeed).build();
+    private final static Logger LOGGER = Logger.getLogger(TrainControllerImpl.class.getName());
     @Override
     public void followSpeed() {
         if (referenceSpeed < 0) {
@@ -60,7 +63,8 @@ public class TrainControllerImpl extends Thread implements TrainController {
                 followSpeed();
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+               LOGGER.log(Level.WARNING,"Interrupted!",e);
+                Thread.currentThread().interrupt();
             }
         }
     }
