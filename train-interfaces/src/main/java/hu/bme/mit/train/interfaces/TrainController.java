@@ -12,4 +12,6 @@ public interface TrainController {
 	
 	Table<Long,Integer,Integer> getTachometer();
 
+	//for testing
+	void setReferenceSpeed(int referenceSpeed);
 }

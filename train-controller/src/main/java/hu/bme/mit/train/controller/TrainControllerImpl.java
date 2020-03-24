@@ -68,4 +68,9 @@ public class TrainControllerImpl extends Thread implements TrainController {
             }
         }
     }
+
+    //for testing
+    public void setReferenceSpeed(int referenceSpeed) {
+        this.referenceSpeed = referenceSpeed;
+    }
 }
