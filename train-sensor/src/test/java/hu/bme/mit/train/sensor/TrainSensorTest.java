@@ -8,9 +8,9 @@ import org.junit.Test;
 import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
-	TrainUser mockTrainUser;
-    TrainController mockTrainController;
-    TrainSensor sensor;
+	public TrainUser mockTrainUser;
+    public TrainController mockTrainController;
+    public TrainSensor sensor;
 
     @Before
     public void before(){
