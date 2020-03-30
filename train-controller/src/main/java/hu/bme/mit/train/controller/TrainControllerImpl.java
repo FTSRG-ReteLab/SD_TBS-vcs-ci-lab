@@ -9,6 +9,24 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 	private Table<Long, Integer, Integer> table = new ImmutableTable.Builder<Long, Integer, Integer>().put(System.currentTimeMillis(), step, referenceSpeed).build();
+	private Thread thread;
+
+	public TrainControllerImpl(){
+		thread=new Thread() {
+			public void run() {
+				thread.run();
+				try {
+					followSpeed();
+					thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+
+			}
+		};
+	}
+
+
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
