@@ -4,7 +4,6 @@ import hu.bme.mit.train.interfaces.TrainController;
 import com.google.common.collect.*;
 import java.lang.*;
 public class TrainControllerImpl implements TrainController {
-
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
@@ -25,8 +24,7 @@ public class TrainControllerImpl implements TrainController {
 			}
 		};
 	}
-
-
+	
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
