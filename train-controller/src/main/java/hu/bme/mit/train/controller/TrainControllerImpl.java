@@ -2,6 +2,7 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 import com.google.common.collect.*;
+
 import java.lang.*;
 public class TrainControllerImpl implements TrainController {
 	private int step = 0;
@@ -33,35 +34,37 @@ public class TrainControllerImpl implements TrainController {
 		    if(referenceSpeed+step > 0) {
                 referenceSpeed += step;
             } else {
-		        referenceSpeed = 0;
+                referenceSpeed = 0;
             }
-		}
+        }
 
-		enforceSpeedLimit();
-	}
+        enforceSpeedLimit();
+    }
 
-	@Override
-	public int getReferenceSpeed() {
-		return referenceSpeed;
-	}
+    @Override
+    public int getReferenceSpeed() {
+        return referenceSpeed;
+    }
 
-	@Override
-	public void setSpeedLimit(int speedLimit) {
-		this.speedLimit = speedLimit;
-		enforceSpeedLimit();
-		
-	}
+    @Override
+    public void setSpeedLimit(int speedLimit) {
+        this.speedLimit = speedLimit;
+        enforceSpeedLimit();
 
-	private void enforceSpeedLimit() {
-		if (referenceSpeed > speedLimit) {
-			referenceSpeed = speedLimit;
-		}
-	}
+    }
 
-	@Override
-	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
-	}
-	
-	public Table<Long,Integer,Integer> getTachometer(){return table;}
+    private void enforceSpeedLimit() {
+        if (referenceSpeed > speedLimit) {
+            referenceSpeed = speedLimit;
+        }
+    }
+
+    @Override
+    public void setJoystickPosition(int joystickPosition) {
+        this.step = joystickPosition;
+    }
+
+    public Table<Long, Integer, Integer> getTachometer() {
+        return table;
+    }
 }
